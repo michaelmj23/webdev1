@@ -1,0 +1,388 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: url('Background_Image.png') repeat center top; /* Replace 'background-image.jpg' with the path to your image */
+    background-size: 100% auto;
+    color: black; /* Change text color to black */
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    padding: -10rem;
+    padding-top: 65px;
+}
+
+.logo-container {
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+#website-logo {
+    max-width: 1000px; /* Adjust the size as needed */
+    max-height: 1000px;
+    size: 1000px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 5px 15px; /* Adjust the top and bottom padding to control the height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    z-index: 1000; /* Ensure the navbar stays above other content */
+    padding-bottom: 0px;
+}
+
+.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    padding-bottom: -10px;
+    margin-bottom: -15px;
+}
+
+.nav-menu li {
+    margin-right: 20px;
+    background-color: white;
+    padding: 0px;
+    color: black;
+    font-weight: bolder;
+    box-shadow: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: color 0.3s; /* Smooth color transition */
+    padding: 0px 15px;
+    border-bottom: 2px solid transparent; /* Initially no underline */
+}
+
+.nav-menu a.active {
+    border-bottom: 5px solid rgb(103, 103, 103); /* Apply underline for active item */
+}
+
+.nav-menu a:hover {
+    color: rgb(153, 153, 153);
+}
+
+.user-settings {
+    position: relative;
+    right: 40px;
+    font-size: 40px;
+    top: 4px;
+}
+
+.user-settings button {
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    padding: 0;
+    font-size: 40px; /* Adjust the value to make the icon bigger */
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+.user-settings-menu {
+    display: none;
+    position: absolute;
+    background-color: #a2a2a2;
+    padding: 10px;
+    right: 0px;
+    top: 40px;
+    z-index: 2;
+}
+
+.user-settings:hover button {
+    color: rgb(160, 160, 160); /* Change the color on hover */
+    background: none;
+}
+
+.user-settings:hover .user-settings-menu {
+    display: block;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #353535;
+}
+
+#logout-button {
+    font-size: 18px; /* Adjust the font size as needed */
+    color: white;
+}
+
+.user-settings-menu button:hover {
+    background-color: #676767;
+    border-radius: 5px;
+}
+
+.home-section {
+    text-align: center;
+    padding: 2rem;
+}
+
+.items-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.found-items-container,
+.lost-items-container {
+    flex: 1;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    color: black;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    border-bottom: 7px solid #06416e;
+    padding-bottom: 0.5rem;
+    border-radius: 5px;
+}
+
+#introduction {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    margin-bottom: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: rgb(31, 31, 31);
+    font-weight: bold;
+}
+
+#introduction p {
+    margin-bottom: 0px;
+    font-size: 26px;
+    line-height: 1.5;
+    padding-left: 30px;
+    padding-right: 100px;
+    color: rgb(42, 41, 41);
+}
+
+#introduction p:first-child {
+    margin-top: 0;
+}
+
+#introduction p:last-child {
+    margin-bottom: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro-content {
+    flex: 1; /* Take up remaining space */
+}
+
+.intro-image {
+    flex: 0 0 auto; /* Do not grow or shrink */
+}
+
+#introduction img {
+    max-width: 400px; /* Adjust the image size as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding-right: 35px;
+}
+
+
+input,
+textarea,
+button {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #f8f9fa;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.2rem;
+    padding: 0.75rem;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+li img {
+    max-width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin-right: 20px;
+}
+
+li div {
+    flex: 1;
+}
+
+li h3 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+}
+
+li p {
+    margin: 0.5rem 0;
+}
+
+li .availability {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.2rem;
+}
+
+li p strong {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 200px) {
+    .items-section {
+        flex-direction: column;
+    }
+
+    form {
+        max-width: 100%;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    li img {
+        margin-bottom: 10px;
+    }
+}
+
+/* Popup */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    width: 60%;
+    max-width: 800px;
+    box-sizing: border-box;
+    color: black;
+}
+
+#popup-img {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    position: center;
+}
+
+.search-container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px;
+}
+
+#search-found-items, #search-lost-items {
+    flex: 1; /* Allow the input to grow and take up remaining space */
+    padding: 10px; /* Add some padding */
+}
+
+#search-button-found-items, #search-button-lost-items {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-left: 10px; /* Add some space between the input and button */
+}
